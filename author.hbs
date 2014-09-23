@@ -1,0 +1,30 @@
+{{!< default}}
+{{#author}}
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="panel clearfix">
+				{{#if image}}
+					<div class="show-for-small left" style="background: url({{image}}) no-repeat center; background-size: cover; width: 50px; height: 50px; border-radius: 25px; -moz-border-radius: 25px;"></div>
+				{{/if}}
+				<h3 class="hide-for-small">{{name}}</h3>
+				<h3 class="show-for-small" style="margin-top: 12px; margin-left: 60px;">{{name}}</h3>
+				<hr />
+				<div class="row">
+					<div class="large-8 small-12 columns">
+						<p>{{bio}}</p>
+					</div>
+					<div class="large-4 columns hide-for-small">
+						<ul class="vcard">
+							{{#if image}}
+								<li class="image"><center><div style="background: url({{image}}) no-repeat center; background-size: cover; width: 200px; height: 200px; border-radius: 100px; -moz-border-radius: 100px;"></div></center></li>
+							{{/if}}
+							<li class="locality">{{location}}</li>
+							<li class="website"><a href="{{website}}" target="_blank">{{website}}</a></li> 
+							<li class="email"><a href="mailto:{{email}}">{{email}}</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{/author}}

@@ -1,0 +1,25 @@
+{{!< default}}
+{{#foreach posts}}
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="panel clearfix">
+				<h3><a href="{{url}}">{{title}}</a></h3>
+				{{#author}}
+					<h6 class="subheader">
+						<span data-tooltip aria-haspopup="true" class="has-tip radius" title="{{bio}}"><a href="{{url}}" style="color: #000;">{{name}}</a></span>
+					</h6>
+				{{/author}}
+				{{#foreach tags}}
+					<span class="label radius"><a href="{{url}}" style="color: #fff;">{{name}}</a></span>
+				{{/foreach}}
+				<p>
+					{{excerpt words="75"}}[...]
+					<br/>
+					<br/>
+					<a href="{{url}}" class="hide-for-small button radius right small">Read More</a>
+					<a href="{{url}}" class="show-for-small button radius right tiny">Read More</a>
+				</p>
+			</div>
+		</div>
+	</div>
+{{/foreach}}

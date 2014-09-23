@@ -1,0 +1,17 @@
+{{!< default}}
+{{#post}}
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="panel clearfix">
+				<h1>{{title}}</h1>
+				<hr />
+				<p>
+					{{content}}
+				</p>
+				{{#foreach tags}}
+					<span class="label radius"><a href="{{url}}">{{name}}</a></span>
+				{{/foreach}}
+			</div>
+		</div>
+	</div>
+{{/post}}
